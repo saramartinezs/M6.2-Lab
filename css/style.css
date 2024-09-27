@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Cambria';
 }
 
 body {
@@ -19,6 +19,7 @@ article {
 }
 
 address {
+  font-weight: bold;
   position: absolute;
   bottom: 8mm;
   right: 20mm;
@@ -36,6 +37,132 @@ h1 {
   padding: 44px 0;
   color: white;
   text-shadow: 1px 1px 1px black;
+  background-image: url('/img/logo.png');
+  box-shadow:3px 5px 10px rgb(0, 0, 0);
+  border-radius: 100px;
 }
 
 /* Your CSS below here */
+*{
+  margin: 0;
+  padding: 0;
+} 
+
+/*///////// Top of the page //////////*/
+h2 {
+  display: block;
+  text-align: center;
+  font-size: 40px;
+  line-height: 20px;
+  font-family: 'DauphinPlain';
+  margin: 10px 0px 30px 00px;
+}
+
+h4{
+  font-weight: 100;
+  font-size: 14px; 
+  text-align: center;
+  font-style: italic;
+}
+
+h5{
+  font-weight: 100;
+  font-size: 12px;
+  text-align: center;
+}
+
+hr{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgb(255, 255, 255), black, rgb(255, 253, 253));
+}
+
+/* Language Navigation Bar*/
+nav {
+  text-align: center;
+  height: 30px;
+  flex: 100%;
+  margin-top: 25%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+nav ul {
+  text-align: center;
+  display: flex;
+  flex: 100%;
+  list-style-type: none;
+  justify-content: space-evenly; 
+}
+
+nav a{
+  font-size: 10px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+} 
+
+/*//////// article background stuff ////////*/
+article {
+  background: url('/img/top-image.png'); /* Fallback for browsers that don't support next declaration*/
+  background: url('/img/top-image.png') no-repeat left top,
+              url('/img/bottom-image.png') no-repeat left bottom,
+              linear-gradient(to bottom, rgb(204, 200, 200), rgb(255 255 255), rgb(204, 200, 200));
+  background-color: rgb(255, 255, 255);
+  border-top: 1mm solid red;
+  border-bottom: 1mm solid red;
+}
+
+/* ////////// Main content - left and right columns ////////// */
+.columns {
+  display: flex;
+  background-color: inherit;
+}
+
+.rightColumns {
+  margin-right: 90px;
+}
+
+.leftColumns {
+  margin-left: 90px;
+  margin-right: 10px;
+}
+
+p{
+  font-family: 'Cambria';
+  font-size: 12px;
+  text-align: justify;
+}
+
+.leftColumn1{
+  max-width: 100%
+}
+
+
+h3{
+  text-align: left;
+  font-family: 'DauphinPlain';
+  margin-bottom: 10px;
+}
+
+/* /////////// Buttons /////////// */
+.buttons{
+  display: flex;
+  font-size: 12px;
+  align-items: flex-start;
+}
+
+.radioButtons {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+button{
+  display: flex;
+  margin-left: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  
+}

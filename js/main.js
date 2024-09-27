@@ -1,18 +1,28 @@
-window.onload = loaded;
+//window.onload = loaded;
+window.onload = displayValue;
 
 /**
- * Simple Function that will be run when the browser is finished loading.
+ * Simple Function that displays the value of a radio button
  */
-function loaded() {
-    // Assign to a variable so we can set a breakpoint in the debugger!
-    const hello = sayHello();
-    console.log(hello);
+export function getRadioValue(){
+    var radios = document.getElementsByName('group');
+    let selectedValue = '';
+  
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          selectedValue = radios[i].value;  
+          break;
+        }
+    }
+    return selectedValue;
 }
 
-/**
- * This function returns the string 'hello'
- * @return {string} the string hello
- */
-export function sayHello() {
-    return 'hello';
+export function displayValue() {
+    document.getElementById("radioSubmit").onclick = function() {
+      let selectedValue = getRadioValue();
+      alert(selectedValue);
+    };
 }
+  
+displayValue();
+  
